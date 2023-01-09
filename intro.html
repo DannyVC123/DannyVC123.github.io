@@ -1,8 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <body style="background-color:aquamarine;">
+<head>
+<style>
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: darkblue;
+  text-align: center;
+}
+
+label {
+  color: darkblue;
+  font-size: 20px;
+}
+
+.button {
+  background-color: cadetblue;
+  border: none;
+  color: darkblue;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+input {
+  font-size: 25px;
+}
+
+</style>
+</head>
+
+  <body>
         
-    <h1 align="center">Recipe Finder App</h1>
+    <h1>Recipe Finder App</h1>
+    
+    <form align="center">
+        <div style="display: inline-block; text-align: left;">
+            <label for="uname">Username:</label><br>
+            <input type="text" id="uname" name="uname" ><br><br>
+            
+            <label for="pword">Password:</label><br>
+            <input type="password" id="pword" name="pword"><br>
+        </div><br><br>
+        <button class="button">Login</button>
+    </form>
     
   </body>
 </html>
