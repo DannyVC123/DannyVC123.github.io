@@ -5,21 +5,18 @@
 body {
   background-color: lightblue;
 }
-
 h1 {
   color: darkblue;
   text-align: center;
 }
-
 label {
   color: darkblue;
   font-size: 20px;
-}
-  
+} 
 input {
   font-size: 25px;
+  padding: 5px;
 }
-
 .button {
   background-color: cadetblue;
   border: none;
@@ -30,8 +27,7 @@ input {
   font-size: 16px;
   display: inline-block;
   cursor: pointer;
-}
-  
+}  
 .header {
   padding: 60px;
   text-align: center;
@@ -53,13 +49,14 @@ input {
     
     <form align="center">
         <div style="display: inline-block; text-align: left;">
-            <label for="uname">Username:</label><br>
-            <input type="text" id="uname" name="uname" ><br><br>
-            
-            <label for="pword">Password:</label><br>
-            <input type="password" id="pword" name="pword"><br>
+          <label for="uname">Username:</label><br>
+          <input type="text" id="uname" name="uname" ><br><br>
+          <label for="pword">Password:</label><br>
+          <input type="password" id="pword" name="pword"><br>
         </div><br><br>
-        <button class="button">Login</button>
+        <a href="mainsite.html">
+          <button class="button">Login</button>
+        </a>
     </form>
     
   </body>
