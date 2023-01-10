@@ -1,9 +1,151 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Example</title>
-    </head>
-    <body>
-        <p>This is an example of a simple HTML page with one paragraph.</p>
-    </body>
+
+<head>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        h1 {
+            color: darkblue;
+            text-align: center;
+        }
+
+        label {
+            color: darkblue;
+            font-size: 20px;
+        }
+
+        input {
+            font-size: 25px;
+            padding: 5px;
+        }
+
+        .tableFixHead {
+            overflow-y: auto;
+            /* make the table scrollable if height is more than 200 px  */
+            height: 300px;
+            /* gives an initial height of 200px to the table */
+        }
+
+        .tableFixHead thead th {
+            position: sticky;
+            /* make the table heads sticky */
+            top: 0px;
+            /* table head will be placed from the top of the table and sticks to it */
+        }
+
+        table {
+            border-collapse: collapse;
+            /* make the table borders collapse to each other */
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 8px 16px;
+            background: floralwhite;
+            text-align: center;
+            font-size: 25px;
+
+        }
+
+        th {
+            font-size: 30px;
+            color: darkblue;
+            text-align: center;
+            background: #1abc9c;
+        }
+
+        .header {
+            padding: 60px;
+            text-align: center;
+            background: #1abc9c;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>[username]'s Refrigerator</h1>
+    </div>
+
+    <br>
+    <div class="tableFixHead">
+        <table>
+            <thead>
+                <tr>
+                    <th>Current Ingredients</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Carrots</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Onions</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Milk</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Celery</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Tuna</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Bell Pepepprs</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Ground Beef</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Bacon</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+
+    <form align="center">
+      <input type="search" list="languages" placeholder="Add Vegetables">
+      <datalist id="languages">
+        <option value="Artichoke" />
+        <option value="Asparagus" />
+        <option value="Beets" />
+        <option value="Bok Choy" />
+        <option value="Broccoli" />
+        <option value="Brussel Sprouts" />
+        <option value="Cabbage" />
+        <option value="Carrots" />
+        <option value="Cauliflower" />
+        <option value="Celery" />
+        <option value="Corn" />
+        <option value="Cucumber" />
+        <option value="Eggplant" />
+        <option value="Fennel" />
+        <option value="Green Beans" />
+        <option value="Leek" />
+        <option value="Mushrooms" />
+        <option value="Onions" />
+        <option value="Peas" />
+        <option value="Peppers" />
+      </datalist>
+    </form>
+
+</body>
+
 </html>
