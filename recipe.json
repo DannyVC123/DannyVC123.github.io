@@ -3,7 +3,7 @@
        {
           "dish": "Hamburger Gravy",
           "amounts": [0.5, 0.5, 3, 2.5, 1, 1],
-          "measuremeants": ["lb.", "chopped medium", "tablespoons", "cups", "pinch", "pinch"],
+          "measurements": ["lb.", "chopped medium", "tablespoons", "cups", "pinch", "pinch"],
           "ingredients": ["ground beef", "onion", "flour", "milk", "salt", "pepper"],
           "description": "Prep time: 15 mins\tCook time: 15 mins\tTotal time: 30 mins\nServings: 2",
           "instructions": "Brown ground beef with onion until onion is transparent. Stir in flour. Cook for 2 - 3 minutes more. Stir in milk, let thicken but do not boil. Add salt and pepper. Serve over mashed potatoes."
@@ -11,7 +11,7 @@
        {
           "dish": "Hamburger Gravy",
           "amounts": [0.5, 0.5, 3, 2.5, 1, 1],
-          "measuremeants": ["lb.", "chopped medium", "tablespoons", "cups", "pinch", "pinch"],
+          "measurements": ["lb.", "chopped medium", "tablespoons", "cups", "pinch", "pinch"],
           "ingredients": ["ground beef", "onion", "flour", "milk", "salt", "pepper"],
           "description": "Prep time: 15 mins\tCook time: 15 mins\tTotal time: 30 mins\nServings: 2",
           "instructions": "Brown ground beef with onion until onion is transparent. Stir in flour. Cook for 2 - 3 minutes more. Stir in milk, let thicken but do not boil. Add salt and pepper. Serve over mashed potatoes."
