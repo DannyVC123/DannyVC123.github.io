@@ -1,12 +1,108 @@
 {
    "vegetable": [
        {
-           "name": "asparagus",
-           "image": "asparagus.png"
+          "name:" "cauliflower",
+          "image:" "cauliflower.png",
        },
        {
-           "firstName": "cabbage",
-           "image": "cabbage.png"
+          "name:" "corn",
+          "image:" "corn.png",
+       },
+       {
+          "name:" "soy",
+          "image:" "soy.png",
+       },
+       {
+          "name:" "beet",
+          "image:" "beet.png",
+       },
+       {
+          "name:" "carrot",
+          "image:" "carrot.png",
+       },
+       {
+          "name:" "celery",
+          "image:" "celery.png",
+       },
+       {
+          "name:" "artichoke",
+          "image:" "artichoke.png",
+       },
+       {
+          "name:" "onion",
+          "image:" "onion.png",
+       },
+       {
+          "name:" "tomato",
+          "image:" "tomato.png",
+       },
+       {
+          "name:" "asparagus",
+          "image:" "asparagus.png",
+       },
+       {
+          "name:" "sweet potato",
+          "image:" "sweet-potato.png",
+       },
+       {
+          "name:" "olive",
+          "image:" "olive.png",
+       },
+       {
+          "name:" "kohlrabi",
+          "image:" "kohlrabi.png",
+       },
+       {
+          "name:" "garlic",
+          "image:" "garlic.png",
+       },
+       {
+          "name:" "avocado",
+          "image:" "avocado.png",
+       },
+       {
+          "name:" "peas",
+          "image:" "peas.png",
+       },
+       {
+          "name:" "leek",
+          "image:" "leek.png",
+       },
+       {
+          "name:" "salad",
+          "image:" "salad.png",
+       },
+       {
+          "name:" "cucumber",
+          "image:" "cucumber.png",
+       },
+       {
+          "name:" "eggplant",
+          "image:" "eggplant.png",
+       },
+       {
+          "name:" "spinach",
+          "image:" "spinach.png",
+       },
+       {
+          "name:" "cabbage",
+          "image:" "cabbage.png",
+       },
+       {
+          "name:" "lettuce",
+          "image:" "lettuce.png",
+       },
+       {
+          "name:" "bell pepper",
+          "image:" "paprika.png",
+       },
+       {
+          "name:" "radish",
+          "image:" "radish.png",
+       },
+       {
+          "name:" "broccoli",
+          "image:" "broccoli.png",
        }
    ]
 }
