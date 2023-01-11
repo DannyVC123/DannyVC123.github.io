@@ -103,6 +103,10 @@
        {
           "name:" "broccoli",
           "image:" "broccoli.png",
-       }
+       },
+       {
+          "name:" "potato",
+          "image:" "potato.png",
+       },
    ]
 }
