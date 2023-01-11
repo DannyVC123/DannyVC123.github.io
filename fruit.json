@@ -1,0 +1,124 @@
+{
+   "fruit": [
+       {
+          "name:" "papaya",
+          "image:" "papaya.png",
+       },
+       {
+          "name:" "raspberry",
+          "image:" "raspberry.png",
+       },
+       {
+          "name:" "peach",
+          "image:" "peach.png",
+       },
+       {
+          "name:" "apricot",
+          "image:" "apricot.png",
+       },
+       {
+          "name:" "lime",
+          "image:" "lime.png",
+       },
+       {
+          "name:" "squash",
+          "image:" "squash.png",
+       },
+       {
+          "name:" "durian",
+          "image:" "durian.png",
+       },
+       {
+          "name:" "coconut",
+          "image:" "coconut.png",
+       },
+       {
+          "name:" "blueberry",
+          "image:" "blueberry.png",
+       },
+       {
+          "name:" "pineapple",
+          "image:" "pineapple.png",
+       },
+       {
+          "name:" "mango",
+          "image:" "mango.png",
+       },
+       {
+          "name:" "watermelon",
+          "image:" "watermelon.png",
+       },
+       {
+          "name:" "cherry",
+          "image:" "cherry.png",
+       },
+       {
+          "name:" "orange",
+          "image:" "half-orange.png",
+       },
+       {
+          "name:" "grapes",
+          "image:" "grapes.png",
+       },
+       {
+          "name:" "pomegranate",
+          "image:" "pomegranate.png",
+       },
+       {
+          "name:" "pear",
+          "image:" "pear.png",
+       },
+       {
+          "name:" "melon",
+          "image:" "cutted-melon.png",
+       },
+       {
+          "name:" "honeydew",
+          "image:" "melon.png",
+       },
+       {
+          "name:" "dragon fruit",
+          "image:" "dragon-fruit.png",
+       },
+       {
+          "name:" "banana",
+          "image:" "banana.png",
+       },
+       {
+          "name:" "plum",
+          "image:" "plum.png",
+       },
+       {
+          "name:" "apple",
+          "image:" "apple--v1.png",
+       },
+       {
+          "name:" "strawberry",
+          "image:" "strawberry.png",
+       },
+       {
+          "name:" "tangelo",
+          "image:" "tangelo.png",
+       },
+       {
+          "name:" "pumpkin",
+          "image:" "pumpkin.png",
+       },
+       {
+          "name:" "lemon",
+          "image:" "citrus.png",
+       },
+       {
+          "name:" "kiwi",
+          "image:" "kiwi.png",
+       },
+       {
+          "name:" "watermelon",
+          "image:" "slice-of-watermelon.png",
+       },
+       {
+          "name:" "soursop",
+          "image:" "soursop.png",
+       }
+   ]
+}
