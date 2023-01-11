@@ -1,0 +1,12 @@
+{
+   "vegetable": [
+       {
+           "name": "asparagus",
+           "image": "asparagus.png"
+       },
+       {
+           "firstName": "cabbage",
+           "image": "cabbage.png"
+       }
+   ]
+}
