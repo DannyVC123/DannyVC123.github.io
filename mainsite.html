@@ -71,7 +71,7 @@
 
     <br>
     <div class="tableFixHead">
-        <table>
+        <table id="ingredients">
             <thead>
                 <tr>
                     <th></th>
@@ -294,7 +294,28 @@
         <option value="mustard"/>
         <option value="jam"/>
       </datalist>
-    </form> 
+    </form>
+
+    <button type="button" onclick="myFunction()">Try it</button>
+
+    <script>
+        function myFunction() {
+        var table = document.getElementById("ingredients");
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        
+        var img = document.createElement('img');
+        img.src = "./food-icons/cabbage.png";
+        img.width = 50;
+        img.height = 50;
+        cell1.appendChild(img);
+
+        cell2.innerHTML = "cabbage";
+        cell3.innerHTML = "1";
+        }
+    </script>
 
 
    <script type="text/Javascript">
