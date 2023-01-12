@@ -18,27 +18,23 @@
         }
 
         input {
-            font-size: 25px;
+            font-size: 18px;
             padding: 5px;
+            width: 12%
         }
 
         .tableFixHead {
             overflow-y: auto;
-            /* make the table scrollable if height is more than 200 px  */
-            height: 300px;
-            /* gives an initial height of 200px to the table */
+            height: 400px;
         }
 
         .tableFixHead thead th {
             position: sticky;
-            /* make the table heads sticky */
             top: 0px;
-            /* table head will be placed from the top of the table and sticks to it */
         }
 
         table {
             border-collapse: collapse;
-            /* make the table borders collapse to each other */
             width: 100%;
         }
 
@@ -70,7 +66,7 @@
 <body>
 
     <div class="header">
-        <h1>[username]'s Refrigerator</h1>
+        <h1>John's Refrigerator</h1>
     </div>
 
     <br>
@@ -78,41 +74,80 @@
         <table>
             <thead>
                 <tr>
+                    <th></th>
                     <th>Current Ingredients</th>
                     <th>Amount</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Carrots</td>
+                    <td><img src="./food-icons/onion.png" width="50" height="50"></td>
+                    <td>onion</td>
                     <td>1</td>
                 </tr>
                 <tr>
-                    <td>Onions</td>
+                    <td><img src="./food-icons/milk-carton.png" width="50" height="50"></td>
+                    <td>milk</td>
                     <td>1</td>
                 </tr>
                 <tr>
-                    <td>Milk</td>
+                    <td><img src="./food-icons/eggs.png" width="50" height="50"></td>
+                    <td>eggs</td>
                     <td>1</td>
                 </tr>
                 <tr>
-                    <td>Celery</td>
+                    <td><img src="./food-icons/sugar-cube.png" width="50" height="50"></td>
+                    <td>sugar</td>
                     <td>1</td>
                 </tr>
                 <tr>
-                    <td>Tuna</td>
+                    <td><img src="./food-icons/salt-shaker.png" width="50" height="50"></td>
+                    <td>salt</td>
                     <td>1</td>
                 </tr>
                 <tr>
-                    <td>Bell Pepepprs</td>
+                    <td><img src="./food-icons/pepper-shaker.png" width="50" height="50"></td>
+                    <td>pepper</td>
                     <td>1</td>
                 </tr>
                 <tr>
-                    <td>Ground Beef</td>
+                    <td><img src="./food-icons/steak.png" width="50" height="50"></td>
+                    <td>ground beef</td>
                     <td>1</td>
                 </tr>
                 <tr>
-                    <td>Bacon</td>
+                    <td><img src="./food-icons/paprika.png" width="50" height="50"></td>
+                    <td>bell pepper</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><img src="./food-icons/mushroom.png" width="50" height="50"></td>
+                    <td>mushroom</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><img src="./food-icons/bacon.png" width="50" height="50"></td>
+                    <td>bacon</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><img src="./food-icons/cheese.png" width="50" height="50"></td>
+                    <td>cheese</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><img src="./food-icons/olive-oil.png" width="50" height="50"></td>
+                    <td>olive oil</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><img src="./food-icons/tomato.png" width="50" height="50"></td>
+                    <td>tomato</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><img src="./food-icons/potato.png" width="50" height="50"></td>
+                    <td>potato</td>
                     <td>1</td>
                 </tr>
             </tbody>
@@ -120,31 +155,148 @@
     </div>
     <br>
 
+    
     <form align="center">
-      <input type="search" list="languages" placeholder="Add Vegetables">
-      <datalist id="languages">
-        <option value="Artichoke" />
-        <option value="Asparagus" />
-        <option value="Beets" />
-        <option value="Bok Choy" />
-        <option value="Broccoli" />
-        <option value="Brussel Sprouts" />
-        <option value="Cabbage" />
-        <option value="Carrots" />
-        <option value="Cauliflower" />
-        <option value="Celery" />
-        <option value="Corn" />
-        <option value="Cucumber" />
-        <option value="Eggplant" />
-        <option value="Fennel" />
-        <option value="Green Beans" />
-        <option value="Leek" />
-        <option value="Mushrooms" />
-        <option value="Onions" />
-        <option value="Peas" />
-        <option value="Peppers" />
+      <input type="search" list="vegetables" placeholder="Add Vegetables">
+      <datalist id="vegetables">
+        <option value="mushroom"/>
+        <option value="cauliflower"/>
+        <option value="potato"/>
+        <option value="corn"/>
+        <option value="soy"/>
+        <option value="beet"/>
+        <option value="carrot"/>
+        <option value="celery"/>
+        <option value="artichoke"/>
+        <option value="onion"/>
+        <option value="tomato"/>
+        <option value="asparagus"/>
+        <option value="sweet potato"/>
+        <option value="olive"/>
+        <option value="kohlrabi"/>
+        <option value="garlic"/>
+        <option value="peas"/>
+        <option value="leek"/>
+        <option value="salad"/>
+        <option value="cucumber"/>
+        <option value="eggplant"/>
+        <option value="spinach"/>
+        <option value="cabbage"/>
+        <option value="lettuce"/>
+        <option value="bell pepper"/>
+        <option value="radish"/>
+        <option value="broccoli"/>
+      </datalist>
+
+      <input type="search" list="fruits" placeholder="Add Fruits">
+      <datalist id="fruits">
+        <option value="papaya"/>
+        <option value="raspberry"/>
+        <option value="peach"/>
+        <option value="apricot"/>
+        <option value="lime"/>
+        <option value="squash"/>
+        <option value="durian"/>
+        <option value="coconut"/>
+        <option value="blueberry"/>
+        <option value="pineapple"/>
+        <option value="mango"/>
+        <option value="watermelon"/>
+        <option value="cherry"/>
+        <option value="orange"/>
+        <option value="grapes"/>
+        <option value="pomegranate"/>
+        <option value="pear"/>
+        <option value="melon"/>
+        <option value="honeydew"/>
+        <option value="avocado"/>
+        <option value="dragon fruit"/>
+        <option value="banana"/>
+        <option value="plum"/>
+        <option value="apple"/>
+        <option value="strawberry"/>
+        <option value="tangelo"/>
+        <option value="lemon"/>
+        <option value="pumpkin"/>
+        <option value="kiwi"/>
+        <option value="soursop"/>
+      </datalist>
+
+      <input type="search" list="dairy" placeholder="Add Dairy">
+      <datalist id="dairy">
+        <option value="milk"/>
+        <option value="coconut milk"/>
+        <option value="ice cream"/>
+        <option value="cheese"/>
+        <option value="yogurt"/>
+      </datalist>
+
+      <input type="search" list="grains" placeholder="Add Grains">
+      <datalist id="grains">
+        <option value="rice"/>
+        <option value="naan"/>
+        <option value="bread"/>
+        <option value="flour"/>
+        <option value="nachos"/>
+        <option value="oats"/>
+        <option value="spaghetti"/>
+        <option value="noodles"/>
+      </datalist>
+
+      <input type="search" list="meat" placeholder="Add Meat">
+      <datalist id="meat">
+        <option value="ham"/>
+        <option value="beef"/>
+        <option value="fish"/>
+        <option value="turkey"/>
+        <option value="salami"/>
+        <option value="octopus"/>
+        <option value="shellfish"/>
+        <option value="prawn"/>
+        <option value="sausage"/>
+        <option value="chicken"/>
+        <option value="crab"/>
+        <option value="bacon"/>
+        <option value="lamb"/>
+      </datalist>
+
+      <input type="search" list="protein" placeholder="Add Protein">
+      <datalist id="protein">
+        <option value="eggs"/>
+        <option value="hazelnut"/>
+        <option value="ceshew"/>
+        <option value="brazil nut"/>
+        <option value="peanuts"/>
+        <option value="white beans"/>
+        <option value="lentil"/>
+      </datalist>
+
+      <input type="search" list="other" placeholder="Add Other">
+      <datalist id="other">
+        <option value="basil"/>
+        <option value="soy sauce"/>
+        <option value="candy"/>
+        <option value="thyme"/>
+        <option value="sugar"/>
+        <option value="pepper"/>
+        <option value="salt"/>
+        <option value="chili pepper"/>
+        <option value="honey"/>
+        <option value="chocolate"/>
+        <option value="mint"/>
+        <option value="coffee beans"/>
+        <option value="olive oil"/>
+        <option value="cinnamon"/>
+        <option value="mayonnaise"/>
+        <option value="worcestershire sauce"/>
+        <option value="salt"/>
+        <option value="ketchup"/>
+        <option value="mustard"/>
+        <option value="jam"/>
       </datalist>
     </form>
+
+    
 
 </body>
 
