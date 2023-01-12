@@ -317,60 +317,32 @@
       </datalist>
     </form>
 
-    <!--
-    <button type="button" onclick="myFunction()">Try it</button>
-
-    
-    <script>
-        function myFunction() {
-        var table = document.getElementById("ingredients");
-        var row = table.insertRow(-1);
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        var cell3 = row.insertCell(2);
-        
-        var img = document.createElement('img');
-        img.src = "./food-icons/cabbage.png";
-        img.width = 50;
-        img.height = 50;
-        cell1.appendChild(img);
-
-        cell2.innerHTML = "cabbage";
-        cell3.innerHTML = "1";
-        }
-    </script>
-    -->
-
     <script>
         function onInput(listName, inputName) {
-            //const lists = ['vegetables', 'fruits', 'dairy', 'grains', 'meat', 'protein', 'other'];
+            var val = document.getElementById(inputName).value;
+            var opts = document.getElementById(listName).childNodes;
 
-            //for (var j = 0; j < lists.length; j++) {
-                var val = document.getElementById(inputName).value;
-                var opts = document.getElementById(listName).childNodes;
+            for (var i = 0; i < opts.length; i++) {
+                if (opts[i].value === val) {
+                    var table = document.getElementById("ingredients");
+                    var row = table.insertRow(-1);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
 
-                for (var i = 0; i < opts.length; i++) {
-                    if (opts[i].value === val) {
-                        var table = document.getElementById("ingredients");
-                        var row = table.insertRow(-1);
-                        var cell1 = row.insertCell(0);
-                        var cell2 = row.insertCell(1);
-                        var cell3 = row.insertCell(2);
-                        
-                        var img = document.createElement('img');
-                        console.log(opts[i].val);
-                        img.src = "./food-icons/" + opts[i].value + ".png";
-                        img.width = 50;
-                        img.height = 50;
-                        cell1.appendChild(img);
+                    var img = document.createElement('img');
+                    console.log(opts[i].val);
+                    img.src = "./food-icons/" + opts[i].value + ".png";
+                    img.width = 50;
+                    img.height = 50;
+                    cell1.appendChild(img);
 
-                        cell2.innerHTML = opts[i].value;
-                        cell3.innerHTML = "1";
+                    cell2.innerHTML = opts[i].value;
+                    cell3.innerHTML = "1";
 
-                        break;
-                    }
+                    break;
                 }
-            //}
+            }
         }
     </script>
 
