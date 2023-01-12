@@ -177,9 +177,8 @@
     </div>
     <br>
 
-    
     <form align="center">
-      <input type="search" list="vegetables" placeholder="Add Vegetables">
+      <input type="search" oninput='onInput("vegetables", "vegetablesInput")' id='vegetablesInput' list="vegetables" placeholder="Add Vegetables">
       <datalist id="vegetables">
         <option value="mushroom"/>
         <option value="cauliflower"/>
@@ -210,7 +209,7 @@
         <option value="broccoli"/>
       </datalist>
 
-      <input type="search" list="fruits" placeholder="Add Fruits">
+      <input type="search" oninput='onInput("fruits", "fruitInput")' id='fruitInput' list="fruits" placeholder="Add Fruits">
       <datalist id="fruits">
         <option value="papaya"/>
         <option value="raspberry"/>
@@ -244,7 +243,7 @@
         <option value="soursop"/>
       </datalist>
 
-      <input type="search" list="dairy" placeholder="Add Dairy">
+      <input type="search" oninput='onInput("dairy", "dairyInput")' id='dairyInput' list="dairy" placeholder="Add Dairy">
       <datalist id="dairy">
         <option value="milk"/>
         <option value="coconut milk"/>
@@ -253,7 +252,7 @@
         <option value="yogurt"/>
       </datalist>
 
-      <input type="search" list="grains" placeholder="Add Grains">
+      <input type="search" oninput='onInput("grains", "grainsInput")' id='grainsInput' list="grains" placeholder="Add Grains">
       <datalist id="grains">
         <option value="rice"/>
         <option value="naan"/>
@@ -265,7 +264,7 @@
         <option value="noodles"/>
       </datalist>
 
-      <input type="search" list="meat" placeholder="Add Meat">
+      <input type="search" oninput='onInput("meat", "meatInput")' id='meatInput' list="meat" placeholder="Add Meat">
       <datalist id="meat">
         <option value="ham"/>
         <option value="beef"/>
@@ -282,7 +281,7 @@
         <option value="lamb"/>
       </datalist>
 
-      <input type="search" list="protein" placeholder="Add Protein">
+      <input type="search" oninput='onInput("protein", "proteinInput")' id='proteinInput' list="protein" placeholder="Add Protein">
       <datalist id="protein">
         <option value="eggs"/>
         <option value="hazelnut"/>
@@ -293,7 +292,7 @@
         <option value="lentil"/>
       </datalist>
 
-      <input type="search" list="other" placeholder="Add Other">
+      <input type="search" oninput='onInput("other", "otherInput")' id='otherInput' list="other" placeholder="Add Other">
       <datalist id="other">
         <option value="basil"/>
         <option value="soy sauce"/>
@@ -318,8 +317,10 @@
       </datalist>
     </form>
 
+    <!--
     <button type="button" onclick="myFunction()">Try it</button>
 
+    
     <script>
         function myFunction() {
         var table = document.getElementById("ingredients");
@@ -336,6 +337,40 @@
 
         cell2.innerHTML = "cabbage";
         cell3.innerHTML = "1";
+        }
+    </script>
+    -->
+
+    <script>
+        function onInput(listName, inputName) {
+            //const lists = ['vegetables', 'fruits', 'dairy', 'grains', 'meat', 'protein', 'other'];
+
+            //for (var j = 0; j < lists.length; j++) {
+                var val = document.getElementById(inputName).value;
+                var opts = document.getElementById(listName).childNodes;
+
+                for (var i = 0; i < opts.length; i++) {
+                    if (opts[i].value === val) {
+                        var table = document.getElementById("ingredients");
+                        var row = table.insertRow(-1);
+                        var cell1 = row.insertCell(0);
+                        var cell2 = row.insertCell(1);
+                        var cell3 = row.insertCell(2);
+                        
+                        var img = document.createElement('img');
+                        console.log(opts[i].val);
+                        img.src = "./food-icons/" + opts[i].value + ".png";
+                        img.width = 50;
+                        img.height = 50;
+                        cell1.appendChild(img);
+
+                        cell2.innerHTML = opts[i].value;
+                        cell3.innerHTML = "1";
+
+                        break;
+                    }
+                }
+            //}
         }
     </script>
 
