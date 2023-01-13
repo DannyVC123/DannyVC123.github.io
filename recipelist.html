@@ -95,10 +95,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             }
         </style>
     </head>
-    <body>
-        <!--
-        <div class="header">
-        <h1>John's Refrigerator</h1>
+
+<body onload="addRecipes();">
+    <div class="header">
+        <h1>All Recipes</h1>
     </div>
 
     <br>
@@ -106,85 +106,48 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <table id="ingredients">
             <thead>
                 <tr>
-                    <th></th>
-                    <th>Current Ingredients</th>
-                    <th>Amount</th>
+                    <th>Dish</th>
+                    <th>Ingredients</th>
+                    <th>Desctirption</th>
+                    <th>Instructions</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td><img src="./food-icons/onion.png" width="50" height="50"></td>
-                    <td>onion</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td><img src="./food-icons/milk-carton.png" width="50" height="50"></td>
-                    <td>milk</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td><img src="./food-icons/eggs.png" width="50" height="50"></td>
-                    <td>eggs</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td><img src="./food-icons/sugar-cube.png" width="50" height="50"></td>
-                    <td>sugar</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td><img src="./food-icons/salt-shaker.png" width="50" height="50"></td>
-                    <td>salt</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td><img src="./food-icons/pepper-shaker.png" width="50" height="50"></td>
-                    <td>pepper</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td><img src="./food-icons/steak.png" width="50" height="50"></td>
-                    <td>ground beef</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td><img src="./food-icons/paprika.png" width="50" height="50"></td>
-                    <td>bell pepper</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td><img src="./food-icons/mushroom.png" width="50" height="50"></td>
-                    <td>mushroom</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td><img src="./food-icons/bacon.png" width="50" height="50"></td>
-                    <td>bacon</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td><img src="./food-icons/cheese.png" width="50" height="50"></td>
-                    <td>cheese</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td><img src="./food-icons/olive-oil.png" width="50" height="50"></td>
-                    <td>olive oil</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td><img src="./food-icons/tomato.png" width="50" height="50"></td>
-                    <td>tomato</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td><img src="./food-icons/potato.png" width="50" height="50"></td>
-                    <td>potato</td>
-                    <td>1</td>
-                </tr>
-            </tbody>
+            <tbody></tbody>
         </table>
     </div>
-    -->
-    </body>
+
+    <script>
+        function addRecipes() {
+            fetch('./recipe.json')
+                    .then((response) => response.json())
+                    .then((json) => receivedJSON(json));
+        }
+
+        function receivedJSON(json) {
+            var myData = localStorage['objectToPass'];
+            localStorage.removeItem( 'objectToPass' );
+
+            var table = document.getElementById("ingredients");
+            for (var i = 1; i < myData.length; i++) {
+                var row = table.insertRow(-1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+
+                var currRecipe = json["recipe"][myData[i]];
+
+                cell1.innerHTML = currRecipe["dish"];
+                
+                var ing = "";
+                for (var j = 0; j < currRecipe["ingredients"].length; j++) {
+                    ing += currRecipe["amounts"][j] + " " + currRecipe["measurements"][j] + " " + currRecipe["ingredients"][j] + "\n";
+                }
+
+                cell3.innerHTML = currRecipe["description"];
+                cell4.innerHTML = currRecipe["instructions"];
+            }
+        }
+    </script>
+</body>
 </html>

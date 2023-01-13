@@ -378,6 +378,7 @@
         function receivedJSON(json) {
             newWindow.document.body.textContent = " ";
             var table = document.getElementById("ingredients");
+            var validRecipeIndexes = [];
             
             for (var i = 0; i < json.recipe.length; i++) {
                 var recipe = json.recipe[i];
@@ -402,11 +403,11 @@
                 }
 
                 if (recipeMatches) {
-                    newWindow.document.body.textContent += "\n" + i;
+                    validRecipeIndexes.push(i);
                 }
             }
             
-            
+            localStorage.setItem( 'objectToPass', myData );
         }
     </script>
 </body>
