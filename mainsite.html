@@ -82,6 +82,10 @@
             font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
             font-weight: 700;
         }
+        
+        .recipebutton {
+            margin-top: 20px;
+        }
     </style>
 </head>
 
@@ -316,7 +320,10 @@
         <option value="jam" />
       </datalist>
     </form>
-
+    
+    <div align="center">
+        <input class="recipebutton" type=button value="Get Recipes" onClick="OpenPopupWindow();"> 
+    </div>
     <script>
         function onInput(listName, inputName) {
             var val = document.getElementById(inputName).value;
@@ -356,23 +363,12 @@
                 }
             }
         }
+        
+        function OpenPopupWindow() {
+            var url = "recipelist.html";
+            myRef = window.open(url ,'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0');
+            myRef.focus();
+        }
     </script>
-
-
-   <script type="text/Javascript">
-   function OpenPopupWindow()
-{
- var url = "somepage.html";
-myRef = window.open(url ,'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0');
-myRef.focus()
-
-}
-</script>
-<p style="align-content: center">
-  <A style="align-content: center" HREF="newpopup.html" onClick="return popup(this, 'stevie')">my popup</A><br>
-</p>
-<p align="center">
-<input type=button value="Get Recipes" 
-onClick="OpenPopupWindow();"> 
-</form> 
-
+</body>
+</html>
