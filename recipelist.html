@@ -141,8 +141,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 cell1.innerHTML = currRecipe["dish"];
                 
                 var ing = "";
-                for (var j = 0; j < currRecipe["ingredients"].length; j++) {
-                    ing += currRecipe["amounts"][j] + " " + currRecipe["measurements"][j] + " " + currRecipe["ingredients"][j] + "\n";
+                for (var j = 0; j < currRecipe.ingredients.length; j++) {
+                    ing += currRecipe.amounts[j] + " " + currRecipe.measurements[j] + " " + currRecipe.ingredients[j] + "\n";
                 }
 
                 cell3.innerHTML = currRecipe["description"];
