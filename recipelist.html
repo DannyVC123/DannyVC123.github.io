@@ -6,6 +6,8 @@
     </head>
     <body onload="onLoad();">
         
+        <div id="node-id"></div>
+
         <script>
             function onLoad() {
                 fetch('./recipe.json')
@@ -34,7 +36,9 @@
                     }
                     
                     if (recipeMatches) {
-                        
+                        //var node = document.getElementById('node-id');
+                        //node.innerHTML('<p>some dynamic html</p>');
+                        console.log(recipe);
                     }
                 }
             }
