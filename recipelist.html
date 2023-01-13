@@ -36,8 +36,7 @@
                     }
                     
                     if (recipeMatches) {
-                        var node = document.getElementById('node-id');
-                        node.innerHTML('<h1>some dynamic html</h1>');
+                        document.getElementById('node-id').innerHTML(recipe["dish"]);
                     }
                 }
             }
