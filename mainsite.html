@@ -176,6 +176,11 @@
                     <td>potato</td>
                     <td>1</td>
                 </tr>
+                <tr>
+                    <td><img src="./food-icons/sack-of-flour.png" width="50" height="50"></td>
+                    <td>flour</td>
+                    <td>1</td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -378,7 +383,8 @@
         function receivedJSON(json) {
             newWindow.document.body.textContent = " ";
             var table = document.getElementById("ingredients");
-            var validRecipes = [];
+            var validRecipes = Array();
+            var counter = 0;
             
             for (var i = 0; i < json.recipe.length; i++) {
                 var recipe = json.recipe[i];
@@ -403,8 +409,9 @@
                 }
 
                 if (recipeMatches) {
-                    console.log(validRecipeCounter);
-                    validRecipes.push(i);
+                    console.log("here");
+                    validRecipes[counter] = i;
+                    counter++;
                 }
             }
 

@@ -126,7 +126,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     <script>
         function addRecipes() {
             const validRecipes = localStorage.getItem('validRecipes');
-            var validRecipesArr = JSON.parse(validRecipes)
+            var validRecipesArr = JSON.parse(validRecipes);
+            if (validRecipesArr == null) console.log("bruh");
             const json = localStorage.getItem('RecipeJOSN');
             var useableJSON = JSON.parse(json);
 
