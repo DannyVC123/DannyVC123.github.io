@@ -141,7 +141,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 
                 var currRecipe = JSON.parse(values[i]);
 
-                cell1.innerHTML = currRecipe["dish"];
+                cell1.innerHTML = values[i];//currRecipe["dish"];
                 
                 var ing = "";
                 for (var j = 0; j < currRecipe["ingredients"].length; j++) {
