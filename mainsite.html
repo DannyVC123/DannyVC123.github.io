@@ -378,7 +378,7 @@
         function receivedJSON(json) {
             newWindow.document.body.textContent = " ";
             var table = document.getElementById("ingredients");
-            var validRecipeIndexes = [];
+            var validRecipeCounter = 0;
             
             for (var i = 0; i < json.recipe.length; i++) {
                 var recipe = json.recipe[i];
@@ -403,11 +403,11 @@
                 }
 
                 if (recipeMatches) {
-                    validRecipeIndexes.push(i);
+                    console.log(validRecipeCounter);
+                    localStorage.setItem( "recipe" + validRecipeCounter, JSON.stringify(recipe) );
+                    validRecipeCounter += 1
                 }
             }
-            
-            localStorage.setItem( 'objectToPass', myData );
         }
     </script>
 </body>
