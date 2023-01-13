@@ -378,7 +378,7 @@
         function receivedJSON(json) {
             newWindow.document.body.textContent = " ";
             var table = document.getElementById("ingredients");
-            var validRecipeCounter = 0;
+            var validRecipes = [];
             
             for (var i = 0; i < json.recipe.length; i++) {
                 var recipe = json.recipe[i];
@@ -404,10 +404,12 @@
 
                 if (recipeMatches) {
                     console.log(validRecipeCounter);
-                    localStorage.setItem( "recipe" + validRecipeCounter, JSON.stringify(recipe) );
-                    validRecipeCounter += 1
+                    validRecipes.push(i);
                 }
             }
+
+            localStorage.setItem( "recipeJSON", JSON.stringify(json) );
+            localStorage.setItem( 'validRecipes', JSON.stringify(validRecipes));
         }
     </script>
 </body>
