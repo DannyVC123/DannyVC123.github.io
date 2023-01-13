@@ -1,15 +1,43 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Recipe Options</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <div>TODO write content</div>
+    <body onload="onLoad();">
+        
+        <script>
+            function onLoad() {
+                fetch('./recipe.json')
+                    .then((response) => response.json())
+                    .then((json) => receivedJSON(json));
+            }
+            
+            function receivedJSON(json) {
+                var table = document.getElementById("ingredients");
+                
+                for (recipe in json["recipe"]) {
+                    var recipeMatches = true;
+                    for (ingredient in recipe["ingredients"]) {
+                        var foundIngredient = false;
+                        for (var r = 1, row; row = table.rows[r]; r++) {
+                            if (row.cells[1].innerText === ingredient) {
+                                foundIngredient = true;
+                                break;
+                            }
+                        }
+                        
+                        if (!foundIngredient) {
+                            recipeMatches = false;
+                            break;
+                        }
+                    }
+                    
+                    if (recipeMatches) {
+                        
+                    }
+                }
+            }
+        </script>
     </body>
 </html>
