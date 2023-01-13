@@ -98,7 +98,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 
 <body onload="addRecipes();">
     <div class="header">
-        <h1>All Recipes</h1>
+        <h1>Possible Recipes</h1>
     </div>
 
     <br>
@@ -128,6 +128,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             localStorage.removeItem( 'objectToPass' );
 
             var table = document.getElementById("ingredients");
+            var row = table.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            
             for (var i = 1; i < myData.length; i++) {
                 var row = table.insertRow(-1);
                 var cell1 = row.insertCell(0);
