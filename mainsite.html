@@ -176,11 +176,6 @@
                     <td>potato</td>
                     <td>1</td>
                 </tr>
-                <tr>
-                    <td><img src="./food-icons/sack-of-flour.png" width="50" height="50"></td>
-                    <td>flour</td>
-                    <td>1</td>
-                </tr>
             </tbody>
         </table>
     </div>
@@ -330,6 +325,7 @@
         <input class="recipebutton" type=button value="Get Recipes" onClick="OpenPopupWindow();"> 
     </div>
     <script>
+        var newWindow;
         function onInput(listName, inputName) {
             var val = document.getElementById(inputName).value;
             var opts = document.getElementById(listName).childNodes;
@@ -370,9 +366,46 @@
         }
         
         function OpenPopupWindow() {
-            var url = "recipelist.html";
-            myRef = window.open(url ,'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0');
-            myRef.focus();
+            newWindow = window.open("recipelist.html" ,'mywin','left=20,top=20,width=700,height=700,toolbar=1,resizable=0');
+            
+            fetch('./recipe.json')
+                    .then((response) => response.json())
+                    .then((json) => receivedJSON(json));
+            
+            newWindow.focus();
+        }
+        
+        function receivedJSON(json) {
+            newWindow.document.body.textContent = " ";
+            var table = document.getElementById("ingredients");
+            
+            for (const recipe of json.recipe) {
+                var recipeMatches = true;
+                
+                inner:
+                for (const ingredient of recipe.ingredients) {
+                    var foundIngredient = false;
+                    looptable:
+                    for (var r = 1, row; row = table.rows[r]; r++) {
+                        row = table.rows[r];
+                        if (row.cells[1].innerText === ingredient) {
+                            foundIngredient = true;
+                            break looptable;
+                        }
+                    }
+
+                    if (!foundIngredient) {
+                        recipeMatches = false;
+                        break inner;
+                    }
+                }
+
+                if (recipeMatches) {
+                    newWindow.document.body.textContent += "\n" + JSON.stringify(recipe);
+                }
+            }
+            
+            
         }
     </script>
 </body>
