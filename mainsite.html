@@ -379,7 +379,8 @@
             newWindow.document.body.textContent = " ";
             var table = document.getElementById("ingredients");
             
-            for (const recipe of json.recipe) {
+            for (var i = 0; i < json.recipe.length; i++) {
+                var recipe = json.recipe[i];
                 var recipeMatches = true;
                 
                 inner:
@@ -401,7 +402,7 @@
                 }
 
                 if (recipeMatches) {
-                    newWindow.document.body.textContent += "\n" + JSON.stringify(recipe);
+                    newWindow.document.body.textContent += "\n" + i;
                 }
             }
             
